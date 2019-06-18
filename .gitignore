@@ -1,7 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+# 이 파일 자제차 git에 올리지 말아야 할 것들이다.
 # dependencies
-/node_modules
+/node_modules            
+#node_modules가 너무 많기 때문
+
 /.pnp
 .pnp.js
 
