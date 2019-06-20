@@ -2,7 +2,7 @@ import React from 'react';
 import './tweets.css';
 
 
-class SignUp extends React.Component {
+class tweets extends React.Component {
     render(){
         return (
             <div>
