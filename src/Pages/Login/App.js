@@ -1,5 +1,5 @@
 import React from 'react';
-import './style/App.css';
+import './App.css';
 // import Event from './Event';
 // import logo from './logo.svg';
 // import Login from './Login';

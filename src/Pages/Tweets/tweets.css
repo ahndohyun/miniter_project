@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(235, 235, 235);
+}
+
+.leftside{
+    display: inline-block;
+    width: 25%;
+    margin-right: 50px;
+    position: relative;
+    vertical-align: top;
+    /* border: 1px solid rgb(166, 172, 177);
+    border-radius: 40px; */
+}
+
+.rightside{
+    display: inline-block;
+    width: 67%;
+    background-color: #c1e9fd;
+    position: relative;
+}
+
+.top{
+    background-color: #5dc1f0;
+    height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bottom{
+    background-color: white;
+    height: 150px;
+    padding-top: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.round{
+    position: absolute;
+    top: 108px;
+    left: 20px;
+    border: 5px solid #5dc1f0;
+    border-radius: 50%;
+    background-image: url("https://us.123rf.com/450wm/martialred/martialred1507/martialred150700789/42614399-%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A8%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%82%AB%E3%83%A1%E3%83%A9%E5%86%99%E7%9C%9F%E3%81%AE%E3%83%A9%E3%82%A4%E3%83%B3-%E3%82%A2%E3%83%BC%E3%83%88%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3.jpg?ver=6");
+    background-size: 100%;
+    width: 80px;
+    height: 80px;
+}
+
+.status_name{
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 33%;
+}
+
+.status_container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.status_container > div{
+    margin: 5px;
+}
+
+#color ~ div{
+    color: #5dc1f0;
+    font-weight: bold;
+}
+
+.note_text{
+    width: 90%;
+    height: 100px;
+    margin: 30px 50px 20px 50px;
+    padding: 20px;
+    font-size: 20px;
+    border: 2px solid #1ab1f7;
+    border-radius: 10px;
+}
+
+.note_btn{
+    display: block;
+    width: 80px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 2px;
+    border-style: none;
+    border-radius: 30px;
+    background-color: #08a1e7;
+    margin-left: 87%;
+}
+
+.tweet_list{
+    background-color: rgb(243, 242, 242);
+}
+
+.tweet_list ol{
+    padding:0;
+    margin-bottom: 0;
+}
+
+.tweet_list  ol  li{
+    list-style: none;
+    border-bottom: 1px solid rgb(138, 137, 137);
+    padding: 10px;
+}
+.list_title{
+    font-weight: bold;
+}
