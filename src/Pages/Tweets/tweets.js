@@ -12,18 +12,20 @@ class tweets extends React.Component {
     
     fillText = (e) => {
         this.setState({
-            [e.target.name] : e.target.value,
+            [e.target.name]: e.target.value,
         });
     }
 
     clickNote = (e) => {
-        const listData = {msg: this.state.text};
-        this.state.list.push(listData)
+        const listData = {text: this.state.text};
+        const newList = [listData,...this.state.list];          // 아래 주석처럼 state에는 직접 푸쉬 불가  배열을 복사해서 사용해줘야 한다.  .... 앞이라 누를때마다 앞쪽에 생성
+        this.setState({
+            list: newList,
+            text: ""
+        })
+        // this.state.list.push(listData)
     }
 
-    
-    
-    
     render(){
         return (
             <div>
@@ -51,11 +53,11 @@ class tweets extends React.Component {
                     <div className="tweet_list">
                         <ol id="list">
                             {
-                                this.state.list.map((tweet) => {
+                                this.state.list.map((tweet,index) => {  //리액트에서 포문을 돌릴 때는 리스트들의 키 값을 잡아줘야 하는데 index는 좋지 않은 방법...
                                     return (
-                                        <li>
+                                        <li key={index}>
                                             <p className="list_title">User Name</p>
-                                            <p className="list_content">{tweet.msg}</p>
+                                            <p className="list_content">{tweet.text}</p>
                                         </li>
                                     );
                                 })
