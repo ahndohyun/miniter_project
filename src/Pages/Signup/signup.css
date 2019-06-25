@@ -27,7 +27,7 @@ input{
     background-color: rgb(250, 250, 250);
 }
 
-button{
+.signup_btn_default{
     display: block;
     width: 500px;
     height: 40px;
@@ -42,6 +42,21 @@ button{
     background-color: black;
 }
 
-button:hover{
+.signup_btn_default:hover{
     background-color: rgba(0, 0, 0, 0.6);
+}
+
+.signup_btn{
+    display: block;
+    width: 500px;
+    height: 40px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 4px;
+    border-style: none;
+    border-radius: 30px;
+    background-color: #5dc1f0;
 }
