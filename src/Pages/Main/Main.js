@@ -11,8 +11,8 @@ class Main extends React.Component {
   render(){
     return (
       <div className="main_bg">
-        <p className="main_text" data-split="Let's Start Miniter" 
-        onClick={this.goToLogin.bind(this)}>Let's Start Miniter</p>
+        <p className="main_text" data-split="Click to start Miniter" 
+        onClick={this.goToLogin.bind(this)}>Click to start Miniter</p>
       </div>
     );
   }
