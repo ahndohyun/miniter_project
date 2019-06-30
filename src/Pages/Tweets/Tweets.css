@@ -12,6 +12,8 @@ body{
     margin-right: 50px;
     position: relative;
     vertical-align: top;
+    top: 30px;
+    left: 50px;
     /* border: 1px solid rgb(166, 172, 177);
     border-radius: 40px; */
 }
@@ -21,6 +23,8 @@ body{
     width: 67%;
     background-color: #c1e9fd;
     position: relative;
+    top: 30px;
+    left: 50px;
 }
 
 .top{
@@ -75,7 +79,7 @@ body{
 .note_text{
     width: 90%;
     height: 100px;
-    margin: 30px 50px 20px 50px;
+    margin: 30px 30px 20px 50px;
     padding: 20px;
     font-size: 20px;
     border: 2px solid #1ab1f7;

@@ -1,9 +1,9 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import login from './Pages/Login/login';
-import signup from './Pages/Signup/signup';
-import tweets from './Pages/Tweets/tweets';
-import main from './Pages/Main/main';
+import login from './Pages/Login';
+import signup from './Pages/Signup';
+import tweets from './Pages/Tweets';
+import main from './Pages/Main';
 
 class Routers extends React.Component {
     render(){
@@ -11,9 +11,9 @@ class Routers extends React.Component {
             <Router>
                 <Switch>
                     <Route exact path="/" component={main} />
-                    <Route path="/login" component={login} />
-                    <Route path="/signup" component={signup} />
-                    <Route path="/tweets" component={tweets} />
+                    <Route path="/Login" component={login} />
+                    <Route path="/Signup" component={signup} />
+                    <Route path="/Tweets" component={tweets} />
                 </Switch>
             </Router>
         )

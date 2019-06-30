@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './tweets.css';
+import './Tweets.css';
 
 
 class tweets extends React.Component {

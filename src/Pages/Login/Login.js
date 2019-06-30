@@ -1,5 +1,5 @@
 import React from 'react';
-import './login.css';
+import './Login.css';
 
 class Login extends React.Component {
   state = {
@@ -19,6 +19,10 @@ class Login extends React.Component {
     }
   }
 
+  goToSignup(){
+    this.props.history.push('/signup');
+  }
+
   render(){
     let bgColor = this.state.color_black ? "black" : "white";
     return (
@@ -28,8 +32,8 @@ class Login extends React.Component {
         <input id="pw" className="login_input" type="password" placeholder="Password" name="pw" onChange={this.fillInput} value={this.state.pw} />
         <button className={this.state.id.length >= 4 && this.state.pw.length >=4 ? "login_btn" : "login_btn_default"} onClick={this.clickLoginBtn}>Login</button>
         <div className="login_link">
-          <a href="">Forgot password?</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="/signup">Sign up for Miniter</a>
+          <p>Forgot password?</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <p onClick={this.goToSignup.bind(this)}>Sign up for Miniter</p>
         </div>
       </div>
     );

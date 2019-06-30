@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    height: 100vh;  /*vh는 브라우저 크기에 맞춰 높이가 할당*/
+    margin: 0;
+    background: linear-gradient(120deg, #3498db 50%, #ffffff 50%); /*deg는 각도*/
+}
+
+.main_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: #3498db;
+    font-size: 7vw;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    white-space: nowrap;        /*병합*/
+}
+  
+.main_text::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: attr(data-split); /*어딘가에 data-split을 붙임*/
+    width: 50%;
+    color: #fff;
+    overflow: hidden;
+}
