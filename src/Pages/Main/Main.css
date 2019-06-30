@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
 
-body {
+.main_bg {
     height: 100vh;  /*vh는 브라우저 크기에 맞춰 높이가 할당*/
     margin: 0;
     background: linear-gradient(120deg, #3498db 50%, #ffffff 50%); /*deg는 각도*/

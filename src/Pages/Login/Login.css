@@ -26,7 +26,7 @@
   font-size: 16px;
   border-style: none;
   border-bottom: 2px solid rgb(184, 181, 181);
-  background-color: rgb(250, 250, 250);
+  background-color: white;
 }
 
 .login_btn_default{
@@ -40,7 +40,7 @@
   letter-spacing: 4px;
   border-style: none;
   border-radius: 30px;
-  background-color: black;
+  background-color: #49b0f5;
 }
 
 .login_btn{
@@ -54,9 +54,51 @@
   letter-spacing: 4px;
   border-style: none;
   border-radius: 30px;
-  background-color: #5dc1f0;
-}
-
-.login_btn:hover{
   background-color: rgba(0, 0, 0, 0.6);
 }
+
+.login_link {
+  margin-top: 30px;
+  text-align: center;
+}
+.login_link button{
+  border: none;
+  background-color: white;
+  outline: 0;
+  font-size: 20px;
+}
+.login_link button:hover{
+  color: red;
+}
+
+
+
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  position: fixed;
+  background: white;
+  width: 40%;
+  height: auto;
+  top:42%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
