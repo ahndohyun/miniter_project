@@ -7,7 +7,6 @@ class Login extends React.Component {
     id: '',
     pw: '',
     show: false,
-    sign_id: '',
     sign_name: '',
     sign_pw: '',
     sign_repw: ''
@@ -22,7 +21,10 @@ class Login extends React.Component {
   clickLoginBtn = (e) => {
     if(this.state.id && this.state.pw){
       alert('환영합니다')
-      this.props.history.push('/Tweets');
+      this.props.history.push({
+        pathname : '/Tweets',
+        state: { detail: this.state.id}
+      })
     }
   }
   
@@ -47,7 +49,10 @@ class Login extends React.Component {
     }
     else{
         alert('환영합니다')
-        this.props.history.push('/Tweets')
+        this.props.history.push({
+          pathname : '/Tweets',
+          state: {detail: this.state.id}
+        })
     }
   }
 
@@ -69,11 +74,11 @@ class Login extends React.Component {
           <div className="signup_page">
             <button className="modalClose_btn" onClick={this.hideModal}>X</button>
             <h1>Sign up to Miniter</h1>
-            <input id="id" name="sign_id" type="text" placeholder="Enter ID" onChange={this.fillSignInput} value={this.state.sign_id} />
+            <input id="id" name="id" type="text" placeholder="Enter ID" onChange={this.fillSignInput} value={this.state.id} />
             <input id="name" name="sign_name" type="text" placeholder="Enter Name" onChange={this.fillSignInput} value={this.state.sign_name}/>
             <input id="pw" name="sign_pw" type="password" placeholder="Password" onChange={this.fillSignInput} value={this.state.sign_pw}/>
             <input id="repw" name="sign_repw" type="password" placeholder="Check Password" onChange={this.fillSignInput} value={this.state.sign_repw}/>
-            <button className={this.state.sign_id.length >= 4 && this.state.sign_name.length >=4 && this.state.sign_pw.length >=4 && this.state.sign_repw.length >=4? "signup_btn" : "signup_btn_default"} onClick={this.clickSignup.bind(this)}>Sign up</button>
+            <button className={this.state.id.length >= 4 && this.state.sign_name.length >=4 && this.state.sign_pw.length >=4 && this.state.sign_repw.length >=4? "signup_btn" : "signup_btn_default"} onClick={this.clickSignup.bind(this)}>Sign up</button>
           </div>
         </Modal>
         <div className="login_link">

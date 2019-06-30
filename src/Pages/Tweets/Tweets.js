@@ -1,6 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import './Tweets.css';
+import Clock from 'react-live-clock';
 
 
 class tweets extends React.Component {
@@ -23,6 +24,7 @@ class tweets extends React.Component {
             list: newList,
             text: ""
         })
+        
         // this.state.list.push(listData)
     }
 
@@ -33,7 +35,7 @@ class tweets extends React.Component {
                     <div className="top"></div>
                     <div className="round"></div>
                     <div className="bottom">
-                        <div className="status_name">User Name</div>
+                        <div className="status_name">{this.props.location.state.detail}</div>
                         <div className="status_container">
                             <div>Tweets</div>
                             <div>Following</div>
@@ -56,7 +58,9 @@ class tweets extends React.Component {
                                 this.state.list.map((tweet,index) => {  //리액트에서 포문을 돌릴 때는 리스트들의 키 값을 잡아줘야 하는데 index는 좋지 않은 방법...
                                     return (
                                         <li key={index}>
-                                            <p className="list_title">User Name</p>
+                                            <p className="list_title">
+                                                <Clock format={'YYYY 년 MM 월 DD 일 HH:mm:ss'}></Clock>
+                                            </p>
                                             <p className="list_content">{tweet.text}</p>
                                         </li>
                                     );
