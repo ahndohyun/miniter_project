@@ -2,6 +2,7 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import './Tweets.css';
 import Clock from 'react-live-clock';
+import List from '../../Components/List'
 
 
 class tweets extends React.Component {
@@ -24,7 +25,6 @@ class tweets extends React.Component {
             list: newList,
             text: ""
         })
-        
         // this.state.list.push(listData)
     }
 
@@ -53,33 +53,7 @@ class tweets extends React.Component {
                         <button className="note_btn" onClick={this.clickNote}>Tweet</button>
                     </div>
                     <div className="tweet_list">
-                        <ol id="list">
-                            {
-                                this.state.list.map((tweet,index) => {  //리액트에서 포문을 돌릴 때는 리스트들의 키 값을 잡아줘야 하는데 index는 좋지 않은 방법...
-                                    return (
-                                        <li key={index}>
-                                            <p className="list_title">
-                                                <Clock format={'YYYY 년 MM 월 DD 일 HH:mm:ss'}></Clock>
-                                            </p>
-                                            <p className="list_content">{tweet.text}</p>
-                                        </li>
-                                    );
-                                })
-                            }
-
-                            <li>
-                                <p className="list_title">First Tweet!!</p>
-                                <p className="list_content">Hi, I am Dohyeon An.. Nice to meet you~</p>
-                            </li>
-                            <li>
-                                <p className="list_title">Second</p>
-                                <p className="list_content">Asda Story is a massively multiplayer online role-playing game developed by MaxOn Soft Corp and is published by GamesCampus for the North American market, Play Media Group for the European market, OnGame for the Brazilian market, nDoo</p>
-                            </li>
-                            <li>
-                                <p className="list_title">제목</p>
-                                <p className="list_content">내용</p>
-                            </li>
-                        </ol>
+                      <List name={this.state.list} />
                     </div>
                 </div>
             </div>

@@ -59,7 +59,7 @@ body{
 .status_name{
     font-size: 25px;
     font-weight: bold;
-    margin-left: 33%;
+    text-align: center;
 }
 
 .status_container{
